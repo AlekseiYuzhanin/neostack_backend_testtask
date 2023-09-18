@@ -1,0 +1,16 @@
+2023-09-18 21:11:57.956 +07:00 [INF] Now listening on: https://localhost:7010
+2023-09-18 21:11:57.963 +07:00 [INF] Now listening on: http://localhost:5266
+2023-09-18 21:11:57.968 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-18 21:11:57.968 +07:00 [INF] Hosting environment: Development
+2023-09-18 21:11:57.968 +07:00 [INF] Content root path: /home/alexey/projects/neostack_backend_testtask/
+2023-09-18 21:12:32.255 +07:00 [INF] Application is shutting down...
+2023-09-18 21:12:36.191 +07:00 [INF] Now listening on: https://localhost:7010
+2023-09-18 21:12:36.199 +07:00 [INF] Now listening on: http://localhost:5266
+2023-09-18 21:12:36.203 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-18 21:12:36.203 +07:00 [INF] Hosting environment: Development
+2023-09-18 21:12:36.203 +07:00 [INF] Content root path: /home/alexey/projects/neostack_backend_testtask/
+2023-09-18 21:13:05.926 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/ - -
+2023-09-18 21:13:05.967 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/ - - - 307 0 - 44.3143ms
+2023-09-18 21:13:06.020 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7010/ - -
+2023-09-18 21:13:06.029 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7010/ - - - 404 0 - 9.9116ms
+2023-09-18 21:13:42.351 +07:00 [INF] Application is shutting down...

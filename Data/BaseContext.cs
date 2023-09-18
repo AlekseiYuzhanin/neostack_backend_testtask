@@ -15,7 +15,7 @@ public class BaseContext : DbContext
         optionsBuilder.UseNpgsql(_config.GetConnectionString("DefaultConnection"));
     }
 
-    public DbSet<Person> People { get; set; }
+    public DbSet<Person> Person { get; set; }
     public DbSet<Skill> Skills { get; set; }
   
 }

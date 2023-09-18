@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace neostack_backend_testtask.Migrations
 {
     [DbContext(typeof(BaseContext))]
-    [Migration("20230918131109_app")]
-    partial class app
+    [Migration("20230918133508_app1")]
+    partial class app1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,8 +33,8 @@ namespace neostack_backend_testtask.Migrations
 
                     b.Property<string>("DisplayName")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("character varying(100)");
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -43,7 +43,7 @@ namespace neostack_backend_testtask.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("People");
+                    b.ToTable("Person");
                 });
 
             modelBuilder.Entity("Skill", b =>
@@ -65,29 +65,18 @@ namespace neostack_backend_testtask.Migrations
                     b.Property<long>("PersonId")
                         .HasColumnType("bigint");
 
-                    b.Property<long>("PersonId1")
-                        .HasColumnType("bigint");
-
                     b.HasKey("Id");
 
                     b.HasIndex("PersonId");
-
-                    b.HasIndex("PersonId1");
 
                     b.ToTable("Skills");
                 });
 
             modelBuilder.Entity("Skill", b =>
                 {
-                    b.HasOne("Person", null)
+                    b.HasOne("Person", "Person")
                         .WithMany("Skills")
                         .HasForeignKey("PersonId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Person", "Person")
-                        .WithMany()
-                        .HasForeignKey("PersonId1")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

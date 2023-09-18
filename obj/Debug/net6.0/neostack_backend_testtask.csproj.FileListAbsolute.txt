@@ -47,3 +47,15 @@
 /home/alexey/projects/neostack_backend_testtask/obj/Debug/net6.0/neostack_backend_testtask.pdb
 /home/alexey/projects/neostack_backend_testtask/obj/Debug/net6.0/neostack_backend_testtask.genruntimeconfig.cache
 /home/alexey/projects/neostack_backend_testtask/obj/Debug/net6.0/ref/neostack_backend_testtask.dll
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Binder.dll
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/Microsoft.Extensions.Hosting.Abstractions.dll
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/Serilog.dll
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/Serilog.AspNetCore.dll
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/Serilog.Extensions.Hosting.dll
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/Serilog.Extensions.Logging.dll
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/Serilog.Formatting.Compact.dll
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/Serilog.Settings.Configuration.dll
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/Serilog.Sinks.Console.dll
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/Serilog.Sinks.Debug.dll
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/Serilog.Sinks.File.dll
