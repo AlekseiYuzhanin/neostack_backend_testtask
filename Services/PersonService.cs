@@ -98,6 +98,8 @@ public class PersonService : IPersonService
 
     public async Task<ActionResult<Person>> AddPersonWithSkills([FromBody] PersonWithSkillsDto personDto)
     {
+        
+
         var person = new Person
         {
             Name = personDto.Name,
@@ -119,7 +121,7 @@ public class PersonService : IPersonService
         await _db.SaveChangesAsync();
 
         return person;
+
     }
 
-    
 }

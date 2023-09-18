@@ -15,9 +15,39 @@ public PersonController(IPersonService personService)
 }
 
     [HttpGet]
-    public async Task<ActionResult<List<PersonWithSkillsDto>>> GetPersons()
+    public async Task<ActionResult<IEnumerable<PersonWithSkillsDto>>> GetPersons()
     {
         var persons = await _personService.GetPersons();
         return Ok(persons);
     }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult> GetPersonById(long id){
+        var person = await _personService.GetPersonById(id);
+        return Ok(person);
+    }
+
+    [HttpPost]
+    public async Task<ActionResult> AddPersonWithSkills([FromBody] PersonWithSkillsDto personDto){
+        var options = new JsonSerializerOptions
+        {
+            ReferenceHandler = ReferenceHandler.Preserve
+        };
+
+        var person = await _personService.AddPersonWithSkills(personDto);
+        return Ok(JsonSerializer.Serialize(person, options));
+    }
+
+    [HttpPut("{id}")]
+    public async Task<ActionResult> UpdatePersonById(long id, PersonWithSkillsDto personDto){
+        var person = await _personService.UpdatePersonById(id,personDto);
+        return Ok(person);
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<ActionResult> DeletePersonById(long id){
+        var person = await _personService.DeletePersonById(id);
+        return Ok(person);
+    }
+
 }
