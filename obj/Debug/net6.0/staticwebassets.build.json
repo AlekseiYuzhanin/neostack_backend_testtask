@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "sIOarbjdWI3diguZVOfN8RAuGXMIz13DA+qvUXQtryc=",
+  "Source": "neostack_backend_testtask",
+  "BasePath": "_content/neostack_backend_testtask",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

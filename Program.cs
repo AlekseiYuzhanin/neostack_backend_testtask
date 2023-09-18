@@ -8,6 +8,12 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+var config = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json")
+    .Build();
+
+var dbContext = new BaseContext(config);
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
