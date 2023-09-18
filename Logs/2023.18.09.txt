@@ -14,3 +14,17 @@
 2023-09-18 21:13:06.020 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7010/ - -
 2023-09-18 21:13:06.029 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7010/ - - - 404 0 - 9.9116ms
 2023-09-18 21:13:42.351 +07:00 [INF] Application is shutting down...
+2023-09-18 21:21:19.084 +07:00 [INF] Now listening on: https://localhost:7010
+2023-09-18 21:21:19.091 +07:00 [INF] Now listening on: http://localhost:5266
+2023-09-18 21:21:19.095 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-18 21:21:19.096 +07:00 [INF] Hosting environment: Development
+2023-09-18 21:21:19.096 +07:00 [INF] Content root path: /home/alexey/projects/neostack_backend_testtask/
+2023-09-18 21:21:24.999 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7010/ - -
+2023-09-18 21:21:25.055 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7010/ - - - 404 0 - 63.7838ms
+2023-09-18 21:21:25.518 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7010/ - -
+2023-09-18 21:21:25.519 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7010/ - - - 404 0 - 1.1154ms
+2023-09-18 21:21:25.948 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7010/ - -
+2023-09-18 21:21:25.950 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7010/ - - - 404 0 - 1.8283ms
+2023-09-18 21:21:26.084 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7010/ - -
+2023-09-18 21:21:26.085 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7010/ - - - 404 0 - 0.6486ms
+2023-09-18 21:21:43.339 +07:00 [INF] Application is shutting down...
