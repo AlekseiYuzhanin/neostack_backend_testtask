@@ -45,6 +45,7 @@ public class PersonService : IPersonService
 
     public async Task<PersonWithSkillsDto> GetPersonById(long id)
     {
+     
         var person = await _db.Person
             .Include(p => p.Skills)
             .Where(p => p.Id == id)
