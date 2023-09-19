@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http;
+using System.Text.Json;
+
 public class PersonService : IPersonService
 {
     private readonly BaseContext _db;
@@ -119,30 +120,28 @@ public class PersonService : IPersonService
     }
 
     public async Task<ActionResult<Person>> AddPersonWithSkills([FromBody] PersonWithSkillsDto personDto)
+{
+    var person = new Person
     {
-        
-        var person = new Person
+        Name = personDto.Name,
+        DisplayName = personDto.DisplayName
+    };
+
+    foreach (var skillDto in personDto.Skills)
+    {   
+        var skill = new Skill
         {
-            Name = personDto.Name,
-            DisplayName = personDto.DisplayName
+            Name = skillDto.Name,
+            Level = skillDto.Level
         };
 
-        foreach (var skillDto in personDto.Skills)
-        {   
-            var skill = new Skill
-            {
-                Name = skillDto.Name,
-                Level = skillDto.Level
-            };
-
-            person.Skills.Add(skill);
-        }
-
-        _db.Person.Add(person);
-        await _db.SaveChangesAsync();
-
-        return person;
-
+        person.Skills.Add(skill);
     }
+
+    _db.Person.Add(person);
+    await _db.SaveChangesAsync();
+
+    return person;
+}
 
 }
