@@ -8,7 +8,9 @@ public class Skill
         [MaxLength(50)]
         [MinLength(10)]
         public string Name { get; set; }
+
         [Range(1,10)]
+        [Required]
         public byte Level { get; set; }
         public long PersonId { get; set; }
         public virtual Person Person { get; set; }

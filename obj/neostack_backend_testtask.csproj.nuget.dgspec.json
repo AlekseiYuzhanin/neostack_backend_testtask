@@ -77,6 +77,16 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "Xunit": {
+              "target": "Package",
+              "version": "[2.5.1, )"
+            },
+            "Xunit.Runner.Console": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.5.1, )"
             }
           },
           "imports": [

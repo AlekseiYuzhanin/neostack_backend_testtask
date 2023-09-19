@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.AspNetCore.Http;
 public class PersonService : IPersonService
 {
     private readonly BaseContext _db;
@@ -9,20 +9,42 @@ public class PersonService : IPersonService
         _db = db;
     }
 
-    public async Task<ActionResult> DeletePersonById(long id)
-    {
-        var person = await _db.Person.FirstOrDefaultAsync(p => p.Id == id);
+    private ActionResult StatusOk(){
+        return new OkResult();
+    }
 
-    if (person == null)
+    private ActionResult NotFound()
     {
         return new NotFoundResult();
     }
 
-    _db.Person.Remove(person);
-    await _db.SaveChangesAsync();
 
-    return new NoContentResult();
+    private ActionResult BadRequest()
+    {
+        return new BadRequestResult();
     }
+
+
+ public async Task<ActionResult> DeletePersonById(long id)
+{       
+        var person = await _db.Person.FirstOrDefaultAsync(p => p.Id == id);
+        var lastPerson = await _db.Person.OrderBy(p => p.Id).LastOrDefaultAsync();
+        
+        if (person == null)
+        {
+            return NotFound();
+        }
+
+        if (person.Id <= 0 || person.Id > lastPerson.Id)
+        {
+            return BadRequest();
+        }
+
+        _db.Person.Remove(person);
+        await _db.SaveChangesAsync();
+
+        return StatusOk();
+}
 
     public async Task<IEnumerable<PersonWithSkillsDto>> GetPersons()
     {
@@ -44,25 +66,24 @@ public class PersonService : IPersonService
     }
 
     public async Task<PersonWithSkillsDto> GetPersonById(long id)
-    {
-     
-        var person = await _db.Person
-            .Include(p => p.Skills)
-            .Where(p => p.Id == id)
-            .Select(p => new PersonWithSkillsDto
+{
+    var person = await _db.Person
+        .Include(p => p.Skills)
+        .Where(p => p.Id == id)
+        .Select(p => new PersonWithSkillsDto
+        {
+            Name = p.Name,
+            DisplayName = p.DisplayName,
+            Skills = p.Skills.Select(s => new SkillDto
             {
-                Name = p.Name,
-                DisplayName = p.DisplayName,
-                Skills = p.Skills.Select(s => new SkillDto
-                {
-                    Name = s.Name,
-                    Level = s.Level
-                }).ToList()
-            })
-            .FirstOrDefaultAsync();
+                Name = s.Name,
+                Level = s.Level
+            }).ToList()
+        })
+        .FirstOrDefaultAsync();
 
     return person;
-    }
+}
 
     public async Task<PersonWithSkillsDto> UpdatePersonById(long id, PersonWithSkillsDto updatedPerson)
     {
@@ -100,7 +121,6 @@ public class PersonService : IPersonService
     public async Task<ActionResult<Person>> AddPersonWithSkills([FromBody] PersonWithSkillsDto personDto)
     {
         
-
         var person = new Person
         {
             Name = personDto.Name,

@@ -59,3 +59,8 @@
 /home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/Serilog.Sinks.Console.dll
 /home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/Serilog.Sinks.Debug.dll
 /home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/Serilog.Sinks.File.dll
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/published/web.config
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/published/appsettings.Development.json
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/published/appsettings.json
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/published/neostack_backend_testtask.deps.json
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/published/neostack_backend_testtask.runtimeconfig.json
