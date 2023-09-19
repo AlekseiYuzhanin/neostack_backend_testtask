@@ -12,6 +12,14 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<BaseContext>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+Log.Logger = new LoggerConfiguration()
+                .Enrich.FromLogContext()
+                .WriteTo.File($"{Environment.CurrentDirectory}/Logs/{DateTime.UtcNow:yyyy/dd/MM}.txt")
+                .CreateLogger();
+
+builder.Host.UseSerilog();
+
 builder.Services.AddScoped<IPersonService, PersonService>();
 
 var app = builder.Build();

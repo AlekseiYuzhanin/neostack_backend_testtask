@@ -64,3 +64,7 @@
 /home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/published/appsettings.json
 /home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/published/neostack_backend_testtask.deps.json
 /home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/published/neostack_backend_testtask.runtimeconfig.json
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/xunit.abstractions.dll
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/xunit.assert.dll
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/xunit.core.dll
+/home/alexey/projects/neostack_backend_testtask/bin/Debug/net6.0/xunit.execution.dotnet.dll
